@@ -1,0 +1,40 @@
+Create schema myNewDB;
+
+Drop schema myNewDB;
+
+create table Users ( UserID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255));
+
+Drop table Users;
+
+Truncate table Users;
+
+Alter table Users add Birthday date;
+
+Alter table users drop Birthday;
+
+create table Students ( name varchar(50), address varchar(50), city varchar(50), postalcode varchar(50), country varchar(50) );
+insert into Students values ('Jane Doe', '57 Union St', 'Glasgow', 'G13RB', 'Scotland');
+
+select * from students where not city = 'Philadelphia';
+
+select * from students where city = ('Philadelphia') or city = 'Trenton';
+
+select * from Students order by city asc;
+
+select * from Students order by city desc;
+
+select * from Students order by country asc, city asc;
+
+select * from Students where postalcode is not null;
+
+select * from Students where postalcode = null;
+
+update Students set city = 'Edinburgh';
+
+update Students set city = 'Edinburgh' where country = 'Scotland';
+
+update Students set city = 'Edinburgh', country = 'Scotland' where id = '35';
+
+delete from Students where country = 'Scotland';
+
+truncate table Students;
